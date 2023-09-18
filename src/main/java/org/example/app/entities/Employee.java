@@ -15,10 +15,6 @@ public class Employee {
     public Employee() {
 
     }
-
-    public int getId() {
-        return id;
-    }
     public Employee(int id, String lastName, String firstName, Date birthDate, int positionId, String phone, double salary) {
         this.id = id;
         this.lastName = lastName;
@@ -28,7 +24,9 @@ public class Employee {
         this.phone = phone;
         this.salary = salary;
     }
-
+    public int getId() {
+        return id;
+    }
     public void setId(int id) {
         this.id = id;
     }

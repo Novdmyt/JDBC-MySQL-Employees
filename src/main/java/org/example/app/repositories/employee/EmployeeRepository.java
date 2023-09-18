@@ -1,6 +1,7 @@
-package org.example.app.repositories;
+package org.example.app.repositories.employee;
 
 import org.example.app.entities.Employee;
+import org.example.app.repositories.BaseRepository;
 import org.example.app.utils.Constants;
 
 import java.sql.ResultSet;

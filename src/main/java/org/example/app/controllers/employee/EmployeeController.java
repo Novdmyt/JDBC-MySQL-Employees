@@ -5,12 +5,12 @@ import org.example.app.utils.Constants;
 import org.example.app.utils.OptionChecker;
 import org.example.app.views.employee.OptionView;
 
-public class EntityController<T> {
+public class EmployeeController<T> {
 
     OptionView view;
     BaseService<T> service;
 
-    public EntityController(OptionView view, BaseService<T> service) {
+    public EmployeeController(OptionView view, BaseService<T> service) {
         this.view = view;
         this.service = service;
     }

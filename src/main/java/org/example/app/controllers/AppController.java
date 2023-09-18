@@ -2,14 +2,15 @@ package org.example.app.controllers;
 
 import org.example.app.services.AppService;
 import org.example.app.utils.Constants;
-import org.example.app.views.AppView;
+import org.example.app.utils.OptionChecker;
+import org.example.app.views.employee.OptionView;
 
 public class AppController {
 
-    AppView view;
+    OptionView view;
     AppService service;
 
-    public AppController(AppView view, AppService service) {
+    public AppController(OptionView view, AppService service) {
         this.view = view;
         this.service = service;
     }
@@ -22,8 +23,8 @@ public class AppController {
         switch (choice) {
             case 1 -> service.getPositions();
             case 2 -> service.getEmployees();
-            case 0 -> view.getOutput(choice, Constants.APP_CLOSE_MSG);
-            default -> service.getNoSuchOption(choice);
+            case 0 -> view.getOutput(Constants.APP_CLOSE_MSG);
+            default -> OptionChecker.getNoSuchOption(choice);
         }
     }
 }

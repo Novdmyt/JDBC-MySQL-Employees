@@ -1,6 +1,6 @@
 package org.example.app.services;
 
-import org.example.app.controllers.employee.EntityController;
+import org.example.app.controllers.employee.EmployeeController;
 import org.example.app.controllers.positions.PositionController;
 import org.example.app.entities.Employee;
 import org.example.app.exceptions.OptionException;
@@ -25,7 +25,7 @@ public class AppService {
     public void getEmployees() {
         OptionView view = createView(Constants.TABLE_EMPLOYEES);
         BaseService<Employee> service = new EmployeeService();
-        EntityController<Employee> controller = new EntityController<>(view, service);
+        EmployeeController<Employee> controller = new EmployeeController<>(view, service);
         controller.run();
     }
     private OptionView createView(String tableName) {
