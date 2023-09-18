@@ -12,6 +12,10 @@ public class Employee {
     private String phone;
     private double salary;
 
+    public Employee() {
+
+    }
+
     public int getId() {
         return id;
     }
