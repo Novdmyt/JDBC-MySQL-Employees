@@ -1,17 +1,28 @@
 package org.example.app.entities;
 
+import java.sql.Date;
+
 public class Employee {
 
     private int id;
     private String lastName;
     private String firstName;
-    private String birthDate;
+    private Date birthDate;
     private int positionId;
     private String phone;
     private double salary;
 
     public int getId() {
         return id;
+    }
+    public Employee(int id, String lastName, String firstName, Date birthDate, int positionId, String phone, double salary) {
+        this.id = id;
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.birthDate = birthDate;
+        this.positionId = positionId;
+        this.phone = phone;
+        this.salary = salary;
     }
 
     public void setId(int id) {
@@ -34,11 +45,11 @@ public class Employee {
         this.firstName = firstName;
     }
 
-    public String getBirthDate() {
+    public Date getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(String birthDate) {
+    public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
 
